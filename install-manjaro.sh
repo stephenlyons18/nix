@@ -1,4 +1,4 @@
-sh <(curl -L https://nixos.org/nix/install) --daemon
+sudo pacman -Syu
 sudo nix-channel --upgrade
 nix-env -iA nixpkgs.bitwarden
 NIXPKGS_ALLOW_UNFREE=1 nix-env -iA nixpkgs.vscode
@@ -17,4 +17,5 @@ touch ~/.config/starship.toml
 curl https://starship.rs/presets/toml/pastel-powerline.toml > ~/.config/starship.toml
 eval "$(starship init bash)"
 nix-env -iA nixpkgs.gh
+nix-env -iA nixpkgs.wine
 gh auth login
